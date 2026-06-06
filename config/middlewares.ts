@@ -23,7 +23,7 @@ export default ({ env }) => [
   {
   name: 'strapi::cors',
   config: {
-    origin: ['https://roku-admin.vercel.app'],
+    origin: ['https://patters0n58-roku-admin-973ktk8ew-nagalakshmi-s-projects.vercel.app/'],
   },
 },
   {
