@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_web_pagination_dots",
+  "info": {
+    "displayName": "Pagination Dots"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "color": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false,
+      "required": true
+    },
+    "selectedColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false,
+      "required": true
+    },
+    "position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "center",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "gap": {
+      "type": "integer",
+      "required": true,
+      "default": 5
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

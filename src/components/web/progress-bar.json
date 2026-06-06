@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_web_progress_bars",
+  "info": {
+    "displayName": "Progress Bar"
+  },
+  "options": {},
+  "attributes": {
+    "totalBarColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "progressBarColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "totalBarCornerRadius": {
+      "type": "integer",
+      "required": true,
+      "default": 4
+    },
+    "cornerRadius": {
+      "type": "integer",
+      "required": true,
+      "default": 4
+    },
+    "position": {
+      "type": "enumeration",
+      "default": "bottom",
+      "enum": [
+        "top",
+        "bottom"
+      ]
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 4
+    },
+    "hideUnwatched": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "config": {}
+}

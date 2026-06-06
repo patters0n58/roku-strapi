@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_roku_action_icons_groups",
+  "info": {
+    "displayName": "Action Icons Group"
+  },
+  "options": {},
+  "attributes": {
+    "align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "gap": {
+      "type": "integer",
+      "required": true,
+      "default": 10,
+      "min": 0
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "action_icons": {
+      "type": "component",
+      "component": "roku.action-icon",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    }
+  },
+  "config": {}
+}

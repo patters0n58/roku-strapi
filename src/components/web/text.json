@@ -1,0 +1,142 @@
+{
+  "collectionName": "components_web_texts",
+  "info": {
+    "displayName": "Text"
+  },
+  "options": {},
+  "attributes": {
+    "sourceKey": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useCustomText"
+            },
+            false
+          ]
+        }
+      },
+      "required": false
+    },
+    "useCustomText": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "customText": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useCustomText"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "color": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "hoverColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "height": {
+      "type": "integer"
+    },
+    "lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "fontFamily": {
+      "type": "enumeration",
+      "required": true,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "fontSize": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "fontWeight": {
+      "type": "enumeration",
+      "required": true,
+      "default": "normal",
+      "enum": [
+        "normal",
+        "bold",
+        "bolder",
+        "lighter"
+      ]
+    },
+    "fontSpacing": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "textTransform": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "textDecoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "hoverTextDecoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "padding": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

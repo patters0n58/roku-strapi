@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roku_layouts",
+  "info": {
+    "singularName": "roku-layout",
+    "pluralName": "roku-layouts",
+    "displayName": "Roku Layout"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "roku_menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-menu.roku-menu"
+    }
+  }
+}

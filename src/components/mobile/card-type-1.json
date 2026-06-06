@@ -1,0 +1,517 @@
+{
+  "collectionName": "components_mobile_card_type_1s",
+  "info": {
+    "displayName": "Card Type 1"
+  },
+  "options": {},
+  "attributes": {
+    "aspect_ratio": {
+      "type": "enumeration",
+      "required": true,
+      "default": "aspect_16:9",
+      "enum": [
+        "aspect_1:1",
+        "aspect_2:1",
+        "aspect_2:3",
+        "aspect_3:2",
+        "aspect_3:4",
+        "aspect_4:3",
+        "aspect_5:3",
+        "aspect_9:13",
+        "aspect_9:16",
+        "aspect_16:1",
+        "aspect_16:2",
+        "aspect_16:4",
+        "aspect_16:6",
+        "aspect_16:7",
+        "aspect_16:9",
+        "aspect_21:9"
+      ]
+    },
+    "show_image_1": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "image_1_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "image_1_use_custom_url": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": false
+    },
+    "image_1_custom_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "image_1_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "image_1_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "image_1_object_fit": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": "ScaleToFill",
+      "enum": [
+        "ScaleToFit",
+        "ScaleToFill"
+      ]
+    },
+    "image_1_margin_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "image_1_margin_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "image_1_margin_right": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "image_1_margin_bottom": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_image_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "show_label_1": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "label_1_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_1_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 1
+    },
+    "label_1_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_1_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_1_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": "normal",
+      "enum": [
+        "normal",
+        "notoserif",
+        "sans-serif",
+        "sans-serif-light",
+        "sans-serif-thin",
+        "sans-serif-condensed",
+        "sans-serif-medium",
+        "serif",
+        "Roboto",
+        "monospace"
+      ]
+    },
+    "label_1_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "label_1_margin_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "label_1_margin_right": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "label_1_margin_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "label_1_margin_bottom": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "show_label_2": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "label_2_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_2_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": false
+    },
+    "label_2_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_2_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": 1
+    },
+    "label_2_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_2_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_2_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": "normal",
+      "enum": [
+        "normal",
+        "notoserif",
+        "sans-serif",
+        "sans-serif-light",
+        "sans-serif-thin",
+        "sans-serif-condensed",
+        "sans-serif-medium",
+        "serif",
+        "Roboto",
+        "monospace"
+      ]
+    },
+    "label_2_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "label_2_margin_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "label_2_margin_right": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "label_2_margin_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    },
+    "label_2_margin_bottom": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": 0
+    }
+  },
+  "config": {}
+}

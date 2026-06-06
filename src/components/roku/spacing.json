@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_roku_spacings",
+  "info": {
+    "displayName": "Translation"
+  },
+  "options": {},
+  "attributes": {
+    "top": {
+      "type": "integer",
+      "required": true
+    },
+    "left": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "config": {}
+}

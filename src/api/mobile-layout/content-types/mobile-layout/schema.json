@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_layouts",
+  "info": {
+    "singularName": "mobile-layout",
+    "pluralName": "mobile-layouts",
+    "displayName": "Mobile Layout"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+    "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    }
+  }
+}

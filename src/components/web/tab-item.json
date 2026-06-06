@@ -1,0 +1,130 @@
+{
+  "collectionName": "components_web_tab_items",
+  "info": {
+    "displayName": "Tab Item"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label_enable_custom_label": {
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "label_enable_custom_label"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "label_hover_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "label_selected_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "label_text_transform": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "label_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "label_hover_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "label_selected_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "label_background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "label_selected_background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "label_font_family": {
+      "type": "enumeration",
+      "default": "serif",
+      "enum": [
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat",
+        "serif",
+        "sansSerif",
+        "monospace"
+      ]
+    },
+    "label_indicator_height": {
+      "type": "integer",
+      "default": 0
+    },
+    "label_indicator_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "mobile": {
+      "type": "component",
+      "component": "web.tab-item-label",
+      "repeatable": false
+    },
+    "tablet": {
+      "type": "component",
+      "component": "web.tab-item-label",
+      "repeatable": false
+    },
+    "desktop": {
+      "type": "component",
+      "component": "web.tab-item-label",
+      "repeatable": false
+    },
+    "large_desktop": {
+      "type": "component",
+      "component": "web.tab-item-label",
+      "repeatable": false
+    },
+    "tab_content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-page.web-page"
+    }
+  },
+  "config": {}
+}

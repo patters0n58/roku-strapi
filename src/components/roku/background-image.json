@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_roku_background_images",
+  "info": {
+    "displayName": "Secondary Image"
+  },
+  "options": {},
+  "attributes": {
+    "aspect_ratio": {
+      "type": "enumeration",
+      "required": true,
+      "default": "aspectRatio_1:1",
+      "enum": [
+        "aspectRatio_16:9",
+        "aspectRatio_16:6",
+        "aspectRatio_16:2",
+        "aspectRatio_1:1",
+        "aspectRatio_2:3"
+      ]
+    },
+    "source_key": {
+      "type": "string",
+      "required": true
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "config": {}
+}

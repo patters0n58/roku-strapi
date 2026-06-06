@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_roku_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "action": {
+      "type": "enumeration",
+      "required": true,
+      "default": "play",
+      "enum": [
+        "play",
+        "trailer",
+        "favorite"
+      ]
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "label": {
+      "type": "component",
+      "component": "roku.text",
+      "repeatable": false
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "enable_icon": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "icon": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_icon"
+            },
+            true
+          ]
+        }
+      },
+      "component": "roku.button-icon",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

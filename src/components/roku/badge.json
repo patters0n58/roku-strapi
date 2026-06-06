@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_roku_badges",
+  "info": {
+    "displayName": "Badge"
+  },
+  "options": {},
+  "attributes": {
+    "source_key": {
+      "type": "string",
+      "required": true
+    },
+    "source_value": {
+      "type": "string",
+      "required": true
+    },
+    "badge_url": {
+      "type": "string",
+      "required": true
+    },
+    "focused_badge_url": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

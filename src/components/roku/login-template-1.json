@@ -1,0 +1,378 @@
+{
+  "collectionName": "components_roku_login_template_1s",
+  "info": {
+    "displayName": "Login Template 1"
+  },
+  "options": {},
+  "attributes": {
+    "login_url": {
+      "type": "string",
+      "required": true
+    },
+    "register_url": {
+      "type": "string",
+      "required": true
+    },
+    "reset_url": {
+      "type": "string",
+      "required": true
+    },
+    "refresh_url": {
+      "type": "string",
+      "required": true
+    },
+    "enable_logo": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "logo_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "logo_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 300
+    },
+    "logo_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 150
+    },
+    "logo_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_logo"
+            },
+            true
+          ]
+        }
+      },
+      "default": 200
+    },
+    "logo_translation_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_logo"
+            },
+            true
+          ]
+        }
+      },
+      "default": 150
+    },
+    "labels_group_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 200
+    },
+    "labels_group_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 330
+    },
+    "buttons_group_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 1050
+    },
+    "buttons_group_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 330
+    },
+    "input_box_style": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-card-style.roku-card-style"
+    },
+    "buttons_style": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-card-style.roku-card-style"
+    },
+    "login_input_boxes_spacing": {
+      "type": "integer"
+    },
+    "login_buttons_spacing": {
+      "type": "integer"
+    },
+    "register_input_boxes_spacing": {
+      "type": "integer"
+    },
+    "register_buttons_spacing": {
+      "type": "integer"
+    },
+    "forgot_password_input_boxes_spacing": {
+      "type": "integer"
+    },
+    "forgot_password_buttons_spacing": {
+      "type": "integer",
+      "default": 10
+    },
+    "title_font": {
+      "type": "enumeration",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont"
+      ]
+    },
+    "title_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "sub_title_font": {
+      "type": "enumeration",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont"
+      ]
+    },
+    "sub_title_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "sub_title_y_offset": {
+      "type": "integer"
+    },
+    "optional_title_1_font": {
+      "type": "enumeration",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont"
+      ]
+    },
+    "optional_title_1_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "optional_title_1_y_offset": {
+      "type": "integer"
+    },
+    "optional_title_2_font": {
+      "type": "enumeration",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont"
+      ]
+    },
+    "optional_title_2_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "optional_title_2_y_offset": {
+      "type": "integer"
+    },
+    "login_title_text": {
+      "type": "string",
+      "default": "Login",
+      "required": true
+    },
+    "login_sub_title_text": {
+      "type": "string"
+    },
+    "login_optional_title_1_text": {
+      "type": "string"
+    },
+    "login_optional_title_2_text": {
+      "type": "string"
+    },
+    "login_email_placeholder": {
+      "type": "string",
+      "default": "Email",
+      "required": true
+    },
+    "login_password_placeholder": {
+      "type": "string",
+      "default": "Password",
+      "required": true
+    },
+    "register_title_text": {
+      "type": "string",
+      "default": "Sign Up",
+      "required": true
+    },
+    "register_sub_title_text": {
+      "type": "string"
+    },
+    "register_optional_title_1_text": {
+      "type": "string"
+    },
+    "register_optional_title_2_text": {
+      "type": "string"
+    },
+    "register_email_placeholder": {
+      "type": "string",
+      "default": "Email",
+      "required": true
+    },
+    "register_first_name_placeholder": {
+      "type": "string",
+      "default": "First Name",
+      "required": true
+    },
+    "register_last_name_placeholder": {
+      "type": "string",
+      "default": "Last Name",
+      "required": true
+    },
+    "register_password_placeholder": {
+      "type": "string",
+      "default": "Password",
+      "required": true
+    },
+    "forgot_password_title_text": {
+      "type": "string",
+      "default": "Forgot Password",
+      "required": true
+    },
+    "forgot_password_sub_title_text": {
+      "type": "string"
+    },
+    "forgot_password_optional_title_1_text": {
+      "type": "string"
+    },
+    "forgot_password_optional_title_2_text": {
+      "type": "string"
+    },
+    "forgot_password_email_placeholder": {
+      "type": "string",
+      "default": "Email",
+      "required": true
+    },
+    "login_button_text": {
+      "type": "string",
+      "default": "Login",
+      "required": true
+    },
+    "register_button_text": {
+      "type": "string",
+      "default": "Sign Up",
+      "required": true
+    },
+    "forgot_password_button_text": {
+      "type": "string",
+      "default": "Forgot Password",
+      "required": true
+    },
+    "error_label_translation_left": {
+      "type": "integer"
+    },
+    "error_label_translation_top": {
+      "type": "integer"
+    },
+    "error_label_width": {
+      "type": "integer",
+      "default": 600
+    },
+    "error_label_font": {
+      "type": "enumeration",
+      "default": "TinySystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont"
+      ]
+    },
+    "error_label_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "login_error_text": {
+      "type": "string"
+    },
+    "register_error_text": {
+      "type": "string"
+    },
+    "forgot_password_error_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_common_feed_contexts",
+  "info": {
+    "displayName": "Feed Context"
+  },
+  "options": {},
+  "attributes": {
+    "context_key": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "bundle_identifier",
+        "advertising_identifier",
+        "uuid",
+        "os_version",
+        "device_model",
+        "device_make",
+        "device_name",
+        "device_type",
+        "user_agent",
+        "device_width",
+        "device_height",
+        "time_zone_offset",
+        "platform",
+        "sdk_version",
+        "version_name",
+        "layout_id",
+        "is_debug",
+        "language_code",
+        "language_locale",
+        "store",
+        "signed_device_info_token",
+        "browser"
+      ]
+    },
+    "context_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": ["query_param", "header", "authentication"]
+    },
+    "rename_key": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

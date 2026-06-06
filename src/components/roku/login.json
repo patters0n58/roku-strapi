@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_roku_logins",
+  "info": {
+    "displayName": "Login"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "login_template": {
+      "type": "enumeration",
+      "required": true,
+      "default": "login_template_1",
+      "enum": [
+        "login_template_1"
+      ]
+    },
+    "login_template_1": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "login_template"
+            },
+            "login_template_1"
+          ]
+        }
+      },
+      "component": "roku.login-template-1",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

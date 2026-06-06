@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_presets",
+  "info": {
+    "singularName": "mobile-preset",
+    "pluralName": "mobile-presets",
+    "displayName": "Mobile Preset"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+   "attributes": {
+    "preset_name": {
+      "type": "string",
+      "required": true
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-layout.mobile-layout"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "preset_blocks": {
+      "type": "dynamiczone",
+      "components": ["mobile.horizontal-list"],
+      "required": true,
+      "min": 1,
+      "max": 1
+    }
+  }
+}

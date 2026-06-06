@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_web_button_groups",
+  "info": {
+    "displayName": "Button Group"
+  },
+  "options": {},
+  "attributes": {
+    "stacking": {
+      "type": "enumeration",
+      "required": true,
+      "default": "horizontal",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "verticalGap": {
+      "type": "integer",
+      "required": true,
+      "default": 8
+    },
+    "horizontalGap": {
+      "type": "integer",
+      "required": true,
+      "default": 8
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false,
+      "required": true
+    },
+    "enableMaxWidth": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "maxWidth": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableMaxWidth"
+            },
+            true
+          ]
+        }
+      }
+    }
+  },
+  "config": {}
+}

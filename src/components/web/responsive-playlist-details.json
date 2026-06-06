@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_web_responsive_playlist_details",
+  "info": {
+    "displayName": "Responsive Playlist Details"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "mobile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "tablet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "desktop": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "large_desktop": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    }
+  },
+  "config": {}
+}

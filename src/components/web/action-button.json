@@ -1,0 +1,146 @@
+{
+  "collectionName": "components_web_action_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "displayMode": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Dynamic",
+      "enum": [
+        "Fix",
+        "Dynamic"
+      ]
+    },
+    "width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "displayMode"
+            },
+            "Fix"
+          ]
+        }
+      }
+    },
+    "contentAlignment": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "backgroundColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false,
+      "required": true
+    },
+    "hoverBackgroundColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "selectedBackgroundColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "enableLabel": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "label": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableLabel"
+            },
+            true
+          ]
+        }
+      },
+      "component": "web.button-label",
+      "repeatable": false,
+      "required": false
+    },
+    "border": {
+      "type": "component",
+      "component": "web.border",
+      "repeatable": false
+    },
+    "hoverBorder": {
+      "type": "component",
+      "component": "web.border",
+      "repeatable": false
+    },
+    "selectedBorder": {
+      "type": "component",
+      "component": "web.border",
+      "repeatable": false
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "padding": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "enableIcon": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "icon": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableIcon"
+            },
+            true
+          ]
+        }
+      },
+      "component": "web.icon",
+      "repeatable": false
+    },
+    "iconPosition": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableIcon"
+            },
+            true
+          ]
+        }
+      },
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    }
+  },
+  "config": {}
+}

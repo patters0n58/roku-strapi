@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_web_lock_badges",
+  "info": {
+    "displayName": "Lock Badge"
+  },
+  "options": {},
+  "attributes": {
+    "lockIconUrl": {
+      "type": "string",
+      "required": true,
+      "regex": "\\bhttps?:\\/\\/[^\\s/$.?#].[^\\s]*\\b"
+    },
+    "unlockIconUrl": {
+      "type": "string"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomRight",
+        "bottomCenter",
+        "bottomLeft"
+      ]
+    },
+    "sourceKey": {
+      "type": "string",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 30
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 30
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

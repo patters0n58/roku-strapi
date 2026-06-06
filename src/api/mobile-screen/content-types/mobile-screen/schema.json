@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_screens",
+  "info": {
+    "singularName": "mobile-screen",
+    "pluralName": "mobile-screens",
+    "displayName": "Mobile Screen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+   "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "is_home": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-layout.mobile-layout"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "page_blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "mobile.horizontal-list",
+        "mobile.grid",
+        "mobile.curation"
+      ],
+      "required": true,
+      "min": 1
+    }
+  }
+}

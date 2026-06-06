@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_web_tab_item_labels_flat",
+  "info": {
+    "displayName": "Tab Item Label"
+  },
+  "options": {},
+  "attributes": {
+    "label_font_size": {
+      "type": "integer",
+      "required": true
+    },
+    "label_font_height": {
+      "type": "integer",
+      "required": true
+    },
+    "label_font_spacing": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "label_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "label_font_weight": {
+      "type": "enumeration",
+      "required": true,
+      "default": "regular",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "label_indicator_width": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

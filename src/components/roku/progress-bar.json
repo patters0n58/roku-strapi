@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_roku_progress_bars",
+  "info": {
+    "displayName": "Progress Bar"
+  },
+  "options": {},
+  "attributes": {
+    "source_key": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 4
+    },
+    "total_bar_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "progress_bar_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

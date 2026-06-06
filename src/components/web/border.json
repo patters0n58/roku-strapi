@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_web_borders",
+  "info": {
+    "displayName": "Border"
+  },
+  "options": {},
+  "attributes": {
+    "style": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "style"
+            },
+            "none "
+          ]
+        }
+      },
+      "required": true,
+      "default": 0
+    },
+    "corner_radius": {
+      "type": "customField",
+      "customField": "plugin::ui.corner_field"
+    }
+  },
+  "config": {}
+}

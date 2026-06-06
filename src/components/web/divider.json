@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_web_dividers",
+  "info": {
+    "displayName": "Divider"
+  },
+  "options": {},
+  "attributes": {
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 4,
+      "min": 0
+    },
+    "color": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false,
+      "required": true
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "direction": {
+      "type": "enumeration",
+      "required": true,
+      "default": "vertical",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
+    }
+  },
+  "config": {}
+}

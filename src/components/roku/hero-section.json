@@ -1,0 +1,822 @@
+{
+  "collectionName": "components_roku_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "image_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "image_aspect_ratio": {
+      "type": "enumeration",
+      "required": true,
+      "default": "aspectRatio_16:9",
+      "enum": [
+        "aspectRatio_16:9",
+        "aspectRatio_16:6",
+        "aspectRatio_16:2",
+        "aspectRatio_1:1",
+        "aspectRatio_2:3"
+      ]
+    },
+    "image_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "image_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "image_height": {
+      "type": "integer",
+      "required": true
+    },
+    "image_width": {
+      "type": "integer",
+      "required": true
+    },
+    "use_secondary_image": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "secondary_image_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "secondary_image_height": {
+      "type": "integer",
+      "required": true
+    },
+    "secondary_image_width": {
+      "type": "integer",
+      "required": true
+    },
+    "secondary_image_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "secondary_image_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "secondary_image_position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "center",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "center",
+        "centerLeft",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ]
+    },
+    "use_mask_image": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "mask_image_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useMaskImage"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "enable_title_1": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_1_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "title_1_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_1_custom_text": {
+      "type": "string"
+    },
+    "title_1_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "title_1_focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "title_1_height": {
+      "type": "integer"
+    },
+    "title_1_width": {
+      "type": "integer",
+      "required": true
+    },
+    "title_1_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "title_1_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_1_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "title_1_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "title_1_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "enable_title_2": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_2_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "title_2_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_2_custom_text": {
+      "type": "string"
+    },
+    "title_2_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "title_2_focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "title_2_height": {
+      "type": "integer"
+    },
+    "title_2_width": {
+      "type": "integer",
+      "required": true
+    },
+    "title_2_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "title_2_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_2_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "title_2_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "title_2_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "enable_title_3": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_3_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "title_3_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_3_custom_text": {
+      "type": "string"
+    },
+    "title_3_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "title_3_focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "title_3_height": {
+      "type": "integer"
+    },
+    "title_3_width": {
+      "type": "integer",
+      "required": true
+    },
+    "title_3_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "title_3_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_3_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "title_3_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "title_3_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "enable_button_1": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_1_action": {
+      "type": "enumeration",
+      "required": true,
+      "default": "play",
+      "enum": [
+        "play",
+        "trailer",
+        "favorite"
+      ]
+    },
+    "button_1_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_1_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_1_label_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "button_1_label_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_1_label_custom_text": {
+      "type": "string"
+    },
+    "button_1_label_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "button_1_label_focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "button_1_label_height": {
+      "type": "integer"
+    },
+    "button_1_label_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_1_label_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "button_1_label_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "button_1_label_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "button_1_label_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_1_label_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_1_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_1_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_1_enable_icon": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_1_icon_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_1_icon_focus_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_1_icon_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_1_icon_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_1_icon_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_1_icon_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_1_icon_position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    },
+    "enable_button_2": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_2_action": {
+      "type": "enumeration",
+      "required": true,
+      "default": "play",
+      "enum": [
+        "play",
+        "trailer",
+        "favorite"
+      ]
+    },
+    "button_2_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_2_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_2_label_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "button_2_label_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_2_label_custom_text": {
+      "type": "string"
+    },
+    "button_2_label_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "button_2_label_focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "button_2_label_height": {
+      "type": "integer"
+    },
+    "button_2_label_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_2_label_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "button_2_label_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "button_2_label_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "button_2_label_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_2_label_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_2_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_2_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_2_enable_icon": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_2_icon_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_2_icon_focus_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_2_icon_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_2_icon_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_2_icon_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_2_icon_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_2_icon_position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    },
+    "enable_button_3": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_3_action": {
+      "type": "enumeration",
+      "required": true,
+      "default": "play",
+      "enum": [
+        "play",
+        "trailer",
+        "favorite"
+      ]
+    },
+    "button_3_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_3_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_3_label_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "button_3_label_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_3_label_custom_text": {
+      "type": "string"
+    },
+    "button_3_label_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "button_3_label_focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "button_3_label_height": {
+      "type": "integer"
+    },
+    "button_3_label_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_3_label_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "button_3_label_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "button_3_label_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "button_3_label_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_3_label_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_3_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_3_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_3_enable_icon": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button_3_icon_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_3_icon_focus_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_3_icon_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_3_icon_width": {
+      "type": "integer",
+      "required": true
+    },
+    "button_3_icon_translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_3_icon_translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "button_3_icon_position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    }
+  },
+  "config": {}
+}

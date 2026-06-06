@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_web_colors",
+  "info": {
+    "displayName": "Color"
+  },
+  "options": {},
+  "attributes": {
+    "hex": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "opacity": {
+      "type": "integer",
+      "required": true,
+      "default": 100,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "config": {}
+}

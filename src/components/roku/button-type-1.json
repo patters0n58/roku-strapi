@@ -1,0 +1,510 @@
+{
+  "collectionName": "components_roku_button_type_1s",
+  "info": {
+    "displayName": "Button Type 1"
+  },
+  "options": {},
+  "attributes": {
+    "show_icon": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "icon_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "icon_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "icon_translation_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "icon_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "focused_icon_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "unfocused_icon_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "footprint_icon_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_icon"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "show_label": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "label_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "label_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "label_translation_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "label_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "label_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "label_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "label_horizontal_alignment": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "default": "center",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "label_vertical_alignment": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "enum": [
+        "top",
+        "center",
+        "bottom"
+      ]
+    },
+    "label_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "default": "MediumBoldSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "label_focused_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "default": "MediumBoldSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "label_focused_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#FFFFFF"
+    },
+    "label_footprint_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "default": "MediumBoldSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "label_footprint_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_label"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#FFFFFF"
+    },
+    "show_bar": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "bar_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_bar"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
+    },
+    "bar_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_bar"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#FFFFFF",
+      "required": true
+    },
+    "show_background": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "background_rectangle_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_background"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
+    },
+    "background_rectangle_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_background"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
+    },
+    "background_rectangle_opacity": {
+      "type": "decimal",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_background"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
+    },
+    "background_rectangle_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_background"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#FFFFFF"
+    },
+    "background_rectangle_focused_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_background"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#FFFFFF"
+    },
+    "background_rectangle_footprint_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_background"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#FFFFFF"
+    },
+    "item_gap": {
+      "type": "integer",
+      "required": true
+    },
+    "button_translation_top": {
+      "type": "integer",
+      "required": true
+    },
+    "button_translation_left": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "config": {}
+}

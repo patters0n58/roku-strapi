@@ -1,0 +1,358 @@
+{
+  "collectionName": "components_roku_roku_players",
+  "info": {
+    "displayName": "Roku Player"
+  },
+  "options": {},
+  "attributes": {
+    "player_height": {
+      "type": "integer"
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "video_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "enable_ads": {
+      "type": "boolean"
+    },
+    "enable_trickplay": {
+      "type": "boolean"
+    },
+    "trickplay_text_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "trickplay_background_overlay": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "trickplaybar_current_time_marker_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "trickplaybar_thumb_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "trickplaybar_filled_bar_image_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "trickplaybar_track_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "trickplaybar_track_image_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "trickplaybar_filled_bar_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_trickplay"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "enable_captions": {
+      "type": "boolean"
+    },
+    "captions_text_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "Serif Fixed Width",
+        "Serif Proportional",
+        "Sans Serif Fixed Width",
+        "Sans Serif Proportional",
+        "Casual",
+        "Cursive",
+        "Small Caps"
+      ]
+    },
+    "captions_text_effect": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "None",
+        "Raised",
+        "Depressed",
+        "Uniform",
+        "Drop shadow (left)",
+        "Drop shadow (right)"
+      ]
+    },
+    "captions_text_size": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "Large",
+        "Medium",
+        "Small"
+      ]
+    },
+    "captions_text_color": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "White",
+        "Black",
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow",
+        "Magenta",
+        "Cyan"
+      ]
+    },
+    "captions_text_opacity": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "percent_25%",
+        "percent_50%",
+        "percent_75%",
+        "percent_100%"
+      ]
+    },
+    "captions_background_color": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "White",
+        "Black",
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow",
+        "Magenta",
+        "Cyan"
+      ]
+    },
+    "captions_background_opacity": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "percent_25%",
+        "percent_50%",
+        "percent_75%",
+        "percent_100%"
+      ]
+    },
+    "captions_window_color": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "White",
+        "Black",
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow",
+        "Magenta",
+        "Cyan"
+      ]
+    },
+    "captions_window_opacity": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_captions"
+            },
+            true
+          ]
+        }
+      },
+      "default": "default",
+      "enum": [
+        "default",
+        "percent_25%",
+        "percent_50%",
+        "percent_75%",
+        "percent_100%"
+      ]
+    },
+    "bif_frame_bg_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "bif_frame_bg_image_uri": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

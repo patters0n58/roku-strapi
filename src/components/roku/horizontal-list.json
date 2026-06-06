@@ -1,0 +1,325 @@
+{
+  "collectionName": "components_roku_horizontal_lists",
+  "info": {
+    "displayName": "Horizontal List",
+    "description": "Horizontally scrollable list with lazy loading, pagination, focus behavior, and pagination dots"
+  },
+  "options": {
+    "timestamps": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "card_style": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-card-style.roku-card-style"
+    },
+    "cells_focusable": {
+      "type": "boolean",
+      "default": true
+    },
+    "enable_title": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "title_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "title_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "title_focused_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "title_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "title_translation_bottom": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "cells_per_view": {
+      "type": "integer",
+      "required": true
+    },
+    "cell_gap": {
+      "type": "integer",
+      "default": 0
+    },
+    "peek_offset": {
+      "type": "integer",
+      "default": 0
+    },
+    "show_row_counter": {
+      "type": "boolean",
+      "default": false
+    },
+    "lazy_load_item_count": {
+      "type": "integer",
+      "default": 1
+    },
+    "item_reload_offset": {
+      "type": "integer",
+      "default": 1
+    },
+    "item_limit": {
+      "type": "integer"
+    },
+    "enable_auto_scroll": {
+      "type": "boolean",
+      "default": false
+    },
+    "auto_scroll_interval": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_auto_scroll"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "focus_animation_style": {
+      "type": "enumeration",
+      "default": "fixedFocus",
+      "enum": [
+        "fixedFocus",
+        "floatingFocus",
+        "fixedFocusWrap"
+      ]
+    },
+    "focus_bitmap_url": {
+      "type": "string"
+    },
+    "focus_bitmap_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "enable_pagination_dots": {
+      "type": "boolean",
+      "default": false
+    },
+    "pagination_dots_dot_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_pagination_dots"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "pagination_dots_gap": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_pagination_dots"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "pagination_dots_translation_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_pagination_dots"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "pagination_dots_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_pagination_dots"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "pagination_dots_selected_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_pagination_dots"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "pagination_dots_unselected_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_pagination_dots"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "focus_height": {
+      "type": "integer"
+    },
+    "list_translation_left": {
+      "type": "integer"
+    },
+    "list_translation_top": {
+      "type": "integer"
+    },
+    "list_translation_bottom": {
+      "type": "integer"
+    },
+    "row_gap": {
+      "type": "integer"
+    }
+  }
+}

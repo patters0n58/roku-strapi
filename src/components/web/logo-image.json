@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_web_logo_images",
+  "info": {
+    "displayName": "Logo Image"
+  },
+  "options": {},
+  "attributes": {
+    "sourceKey": {
+      "type": "string",
+      "required": true
+    },
+    "objectFit": {
+      "type": "enumeration",
+      "required": true,
+      "default": "cover",
+      "enum": [
+        "contain",
+        "cover",
+        "fill",
+        "none",
+        "scaleDown"
+      ]
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 50
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 100
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

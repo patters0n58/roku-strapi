@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_content_type_routers",
+  "info": {
+    "singularName": "mobile-content-type-router",
+    "pluralName": "mobile-content-type-routers",
+    "displayName": "Mobile Content Type Router"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+    "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page_type": {
+      "type": "string",
+      "required": true
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-layout.mobile-layout"
+    },
+    "screen": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-screen.mobile-screen"
+    }
+  }
+}

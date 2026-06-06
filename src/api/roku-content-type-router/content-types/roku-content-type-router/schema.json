@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roku_content_type_routers",
+  "info": {
+    "singularName": "roku-content-type-router",
+    "pluralName": "roku-content-type-routers",
+    "displayName": "Roku Content Type Router"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page_type": {
+      "type": "string",
+      "required": true
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-layout.roku-layout"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "screen": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-screen.roku-screen"
+    }
+  }
+}

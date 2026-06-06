@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_roku_button_groups",
+  "info": {
+    "displayName": "Button Group"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "gap": {
+      "type": "integer",
+      "default": 5,
+      "min": 0
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

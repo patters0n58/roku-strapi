@@ -1,0 +1,56 @@
+{
+  "name": "tdp-lifeui-strapi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@fresh.codes/strapi-plugin-export-csv": "^1.0.2",
+    "@strapi/plugin-color-picker": "^5.31.2",
+    "@strapi/plugin-documentation": "^5.31.2",
+    "@strapi/plugin-users-permissions": "5.31.2",
+    "@strapi/provider-upload-aws-s3": "^5.31.2",
+    "@strapi/strapi": "5.31.2",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "strapi-plugin-populate-all": "^1.4.0",
+    "styled-components": "^6.0.0"
+  },
+  "overrides": {
+    "@strapi/admin": "5.31.2",
+    "@strapi/content-manager": "5.31.2",
+    "@strapi/content-type-builder": "5.31.2",
+    "@strapi/content-releases": "5.31.2",
+    "@strapi/upload": "5.31.2",
+    "@strapi/email": "5.31.2",
+    "@strapi/i18n": "5.31.2",
+    "@strapi/review-workflows": "5.31.2",
+    "@strapi/core": "5.31.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=24.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "aea70a9c-8761-4e28-906d-11119492d6d0",
+    "installId": "7b0cb72236161bcbe9342204ac52e29b3b4681cb120fd4aa1b7b8bfb3bf3519e"
+  }
+}

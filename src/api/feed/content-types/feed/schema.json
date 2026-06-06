@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feeds",
+  "info": {
+    "singularName": "feed",
+    "pluralName": "feeds",
+    "displayName": "Feed"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+    "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed_url": {
+      "type": "string",
+      "required": true
+    },
+    "enable_feed_mapping": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "feed_mapping": {
+      "type": "json",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_feed_mapping"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "method": {
+      "type": "enumeration",
+      "required": true,
+      "default": "get",
+      "enum": [
+        "get",
+        "post"
+      ]
+    },
+    "feed_context": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed-context.feed-context"
+    }
+  }
+}

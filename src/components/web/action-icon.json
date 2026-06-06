@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_web_action_icons",
+  "info": {
+    "displayName": "Action Icon"
+  },
+  "options": {},
+  "attributes": {
+    "action": {
+      "type": "enumeration",
+      "required": true,
+      "default": "play",
+      "enum": [
+        "play",
+        "myList",
+        "share"
+      ]
+    },
+    "iconUrl": {
+      "type": "string",
+      "required": true
+    },
+    "hoverIconUrl": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 40
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 40
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

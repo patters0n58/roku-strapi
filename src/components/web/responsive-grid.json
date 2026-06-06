@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_web_responsive_grids",
+  "info": {
+    "displayName": "Responsive Grid"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "mobile": {
+      "type": "component",
+      "component": "web.grid",
+      "repeatable": false
+    },
+    "tablet": {
+      "type": "component",
+      "component": "web.grid",
+      "repeatable": false
+    },
+    "desktop": {
+      "type": "component",
+      "component": "web.grid",
+      "repeatable": false
+    },
+    "large_desktop": {
+      "type": "component",
+      "component": "web.grid",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

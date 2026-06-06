@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_web_tabs",
+  "info": {
+    "displayName": "Tabs"
+  },
+  "options": {},
+  "attributes": {
+    "background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "mobile_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "tablet_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "desktop_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "large_desktop_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "tab_items": {
+      "type": "component",
+      "component": "web.tab-item",
+      "repeatable": true,
+      "required": true,
+      "min": 1,
+      "max": 3
+    },
+    "mobile_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "tablet_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "desktop_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "large_desktop_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    }
+  },
+  "config": {}
+}

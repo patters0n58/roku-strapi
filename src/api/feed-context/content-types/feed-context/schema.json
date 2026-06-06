@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feed_contexts",
+  "info": {
+    "singularName": "feed-context",
+    "pluralName": "feed-contexts",
+    "displayName": "Feed Context"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "feed_context": {
+      "type": "component",
+      "component": "common.feed-context",
+      "repeatable": true
+    }
+  }
+}

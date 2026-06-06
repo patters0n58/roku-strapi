@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_web_responsive_button_labels",
+  "info": {
+    "displayName": "Responsive Button Label"
+  },
+  "options": {},
+  "attributes": {
+    "mobile": {
+      "type": "component",
+      "component": "web.button-label",
+      "repeatable": false
+    },
+    "tablet": {
+      "type": "component",
+      "component": "web.button-label",
+      "repeatable": false
+    },
+    "desktop": {
+      "type": "component",
+      "component": "web.button-label",
+      "repeatable": false
+    },
+    "largeDesktop": {
+      "type": "component",
+      "component": "web.button-label",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

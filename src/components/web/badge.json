@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_web_badges",
+  "info": {
+    "displayName": "Badge"
+  },
+  "options": {},
+  "attributes": {
+    "entityType": {
+      "type": "string",
+      "required": true
+    },
+    "badgeIcon": {
+      "type": "string",
+      "required": true
+    },
+    "hoverBadgeIcon": {
+      "type": "string",
+      "required": false
+    },
+    "height": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "position": {
+      "type": "enumeration",
+      "default": "bottomRight",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ]
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "padding": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

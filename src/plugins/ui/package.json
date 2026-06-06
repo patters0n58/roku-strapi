@@ -1,0 +1,28 @@
+{
+  "name": "strapi-plugin-ui",
+  "version": "1.0.0",
+  "description": "UI Custom Fields",
+  "strapi": {
+    "name": "ui",
+    "displayName": "UI Custom Fields",
+    "description": "Custom fields for LifeUI (Spacing, Color, Corner)",
+    "kind": "plugin"
+  },
+  "exports": {
+    "./strapi-admin": {
+      "source": "./admin/src/index.tsx",
+      "import": "./admin/src/index.tsx",
+      "require": "./admin/src/index.tsx",
+      "default": "./admin/src/index.tsx"
+    },
+    "./strapi-server": "./strapi-server.js"
+  },
+  "files": [
+    "dist",
+    "admin",
+    "server",
+    "strapi-server.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

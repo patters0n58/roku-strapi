@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_web_icons",
+  "info": {
+    "displayName": "Icon"
+  },
+  "options": {},
+  "attributes": {
+    "iconUrl": {
+      "type": "string",
+      "required": true
+    },
+    "hoverIconUrl": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 25
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 25
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

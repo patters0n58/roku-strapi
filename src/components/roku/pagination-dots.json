@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_roku_pagination_dots",
+  "info": {
+    "displayName": "Pagination Dots"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "gap": {
+      "type": "integer",
+      "required": true,
+      "default": 5
+    },
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "selected_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

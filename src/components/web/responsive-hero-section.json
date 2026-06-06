@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_web_responsive_hero_sections",
+  "info": {
+    "displayName": "Responsive Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "play_feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "trailer_feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "mobile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "tablet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "desktop": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "large_desktop": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    }
+  },
+  "config": {}
+}

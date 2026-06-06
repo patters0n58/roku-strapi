@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_web_responsive_filters_list_or_grids",
+  "info": {
+    "displayName": "Responsive Filters List or Grid"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "component",
+      "component": "web.feed",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

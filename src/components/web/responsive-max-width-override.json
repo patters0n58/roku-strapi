@@ -1,0 +1,82 @@
+{
+  "collectionName": "components_web_responsive_max_width_overrides",
+  "info": {
+    "displayName": "Responsive Max Width Override"
+  },
+  "options": {},
+  "attributes": {
+    "overrideMobileMaxWidth": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "mobile": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "overrideMobileMaxWidth"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "overrideTabletMaxWidth": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "tablet": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "overrideTabletMaxWidth"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "overrideDesktopMaxWidth": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "desktop": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "overrideDesktopMaxWidth"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "overrideLargeDesktopMaxWidth": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "largeDesktop": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "overrideLargeDesktopMaxWidth"
+            },
+            true
+          ]
+        }
+      }
+    }
+  },
+  "config": {}
+}

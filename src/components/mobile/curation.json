@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_mobile_curations",
+  "info": {
+    "displayName": "Curation"
+  },
+  "options": {},
+ "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    }
+  },
+  "config": {}
+}

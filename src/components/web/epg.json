@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_web_epgs",
+  "info": {
+    "displayName": "EPG"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "programs": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "channels": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_web_metadata",
+  "info": {
+    "displayName": "Metadata"
+  },
+  "options": {},
+  "attributes": {
+    "labelStyle": {
+      "type": "component",
+      "component": "web.text",
+      "repeatable": false,
+      "required": true
+    },
+    "valueStyle": {
+      "type": "component",
+      "component": "web.text",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

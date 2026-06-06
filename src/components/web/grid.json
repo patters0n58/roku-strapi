@@ -1,0 +1,308 @@
+{
+  "collectionName": "components_web_grids",
+  "info": {
+    "displayName": "Grid"
+  },
+  "options": {},
+  "attributes": {
+    "enable_title": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "title_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_hover_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": 1,
+      "min": 1
+    },
+    "title_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": "left",
+      "enum": ["left", "right", "center"]
+    },
+    "title_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": 10
+    },
+    "title_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": "regular",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "title_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": 1
+    },
+    "title_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": "none",
+      "enum": ["none", "capitalize", "uppercase", "lowercase"]
+    },
+    "title_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "enum": ["none", "underline", "strikethrough"]
+    },
+    "title_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "enum": ["none", "underline", "strikethrough"]
+    },
+    "title_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "column_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "row_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "column_count": {
+      "type": "integer",
+      "required": true,
+      "default": 5
+    },
+    "card_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-card-type.web-card-type"
+    },
+    "margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    }
+  },
+  "config": {}
+}

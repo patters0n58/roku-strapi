@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roku_screens",
+  "info": {
+    "singularName": "roku-screen",
+    "pluralName": "roku-screens",
+    "displayName": "Roku Screen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "is_home": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "show_menu": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-layout.roku-layout"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "page_blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "roku.horizontal-list",
+        "roku.grid",
+        "roku.curation",
+        "roku.roku-player",
+        "roku.login"
+      ],
+      "min": 1
+    }
+  }
+}

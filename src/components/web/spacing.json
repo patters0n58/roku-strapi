@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_web_spacings",
+  "info": {
+    "displayName": "Spacing"
+  },
+  "options": {},
+  "attributes": {
+    "top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "right": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "bottom": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    }
+  },
+  "config": {}
+}

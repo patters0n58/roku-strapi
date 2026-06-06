@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roku_apps",
+  "info": {
+    "singularName": "roku-app",
+    "pluralName": "roku-apps",
+    "displayName": "Roku App"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "log_level": {
+      "type": "enumeration",
+      "required": true,
+      "default": "warn",
+      "enum": [
+        "debug",
+        "info",
+        "warn",
+        "error"
+      ]
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-layout.roku-layout"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    }
+  }
+}

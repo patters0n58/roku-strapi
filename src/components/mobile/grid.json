@@ -1,0 +1,202 @@
+{
+  "collectionName": "components_mobile_grids",
+  "info": {
+    "displayName": "Grid"
+  },
+  "options": {},
+   "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "card_style": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-card-style.mobile-card-style"
+    },
+    "enable_title": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "title_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "title_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      },
+      "default": "normal",
+      "enum": [
+        "normal",
+        "notoserif",
+        "sans-serif",
+        "sans-serif-light",
+        "sans-serif-thin",
+        "sans-serif-condensed",
+        "sans-serif-medium",
+        "serif",
+        "Roboto",
+        "monospace"
+      ]
+    },
+    "title_translation_bottom": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "column_count": {
+      "type": "integer",
+      "required": true
+    },
+    "row_count": {
+      "type": "integer",
+      "required": true
+    },
+    "column_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "row_gap": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "item_limit": {
+      "type": "integer",
+      "required": false,
+      "default": 20
+    },
+    "translation_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "translation_left": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "translation_right": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "translation_bottom": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "row_reload_offset": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "lazy_load_row_count": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    }
+  },
+  "config": {}
+}

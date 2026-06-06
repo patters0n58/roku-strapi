@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_roku_preview_playbacks",
+  "info": {
+    "displayName": "Preview Playback"
+  },
+  "options": {},
+  "attributes": {
+    "source_key": {
+      "type": "string",
+      "required": true
+    },
+    "start_time_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "end_time_source_key": {
+      "type": "string"
+    },
+    "delay": {
+      "type": "biginteger",
+      "required": true,
+      "default": "5000"
+    },
+    "loop_count": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 1
+    },
+    "default_audio_mode": {
+      "type": "enumeration",
+      "required": true,
+      "default": "mute",
+      "enum": ["mute", "unMute"]
+    }
+  },
+  "config": {}
+}

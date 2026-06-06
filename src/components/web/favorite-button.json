@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_web_favorite_buttons",
+  "info": {
+    "displayName": "Favorite Button",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "selectedFavoriteButton": {
+      "type": "component",
+      "component": "web.action-button",
+      "repeatable": false,
+      "required": true
+    },
+    "unSelectedFavoriteButton": {
+      "type": "component",
+      "component": "web.action-button",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

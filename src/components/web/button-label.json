@@ -1,0 +1,131 @@
+{
+  "collectionName": "components_web_button_labels",
+  "info": {
+    "displayName": "Button Label"
+  },
+  "options": {},
+  "attributes": {
+    "sourceKey": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableCustomLabel"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "enableCustomLabel": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "customLabel": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableCustomLabel"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "color": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "hoverColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false,
+      "required": false
+    },
+    "selectedColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "fontFamily": {
+      "type": "enumeration",
+      "required": true,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "fontSize": {
+      "type": "integer",
+      "required": true
+    },
+    "fontHeight": {
+      "type": "integer",
+      "required": true
+    },
+    "fontSpacing": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "textTransform": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "textDecoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "hoverTextDecoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "fontWeight": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "bold",
+        "bolder",
+        "lighter"
+      ]
+    },
+    "padding": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_roku_button_icons",
+  "info": {
+    "displayName": "Button Icon"
+  },
+  "options": {},
+  "attributes": {
+    "icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "focus_icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    }
+  },
+  "config": {}
+}

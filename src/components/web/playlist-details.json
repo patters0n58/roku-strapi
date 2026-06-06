@@ -1,0 +1,726 @@
+{
+  "collectionName": "components_web_playlist_details_flat",
+  "info": {
+    "displayName": "Playlist Details"
+  },
+  "options": {},
+  "attributes": {
+    "enable_title_1": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "title_1_source_key": {
+      "type": "string",
+     "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_1_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": false
+    },
+    "title_1_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_1_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_hover_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_1_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "default": 1,
+      "min": 1
+    },
+    "title_1_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_1_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_1_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": 10
+    },
+    "title_1_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "normal",
+      "enum": [
+        "normal",
+        "bold",
+        "bolder",
+        "lighter"
+      ]
+    },
+    "title_1_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": 1
+    },
+    "title_1_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "title_1_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_1_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_1_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_1_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "enable_title_2": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_2_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_2_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": false
+    },
+    "title_2_custom_text": {
+      "type": "string",
+       "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_2_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_hover_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_2_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "default": 1,
+      "min": 1
+    },
+    "title_2_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_2_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_2_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": 10
+    },
+    "title_2_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "normal",
+      "enum": [
+        "normal",
+        "bold",
+        "bolder",
+        "lighter"
+      ]
+    },
+    "title_2_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": 1
+    },
+    "title_2_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "title_2_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_2_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_2_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_2_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "enable_title_3": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_3_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "title_3_use_custom_text"
+            },
+            false
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_3_use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_3_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "title_3_use_custom_text"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "title_3_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_hover_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_height": {
+      "type": "integer"
+    },
+    "title_3_lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "title_3_align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_3_font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_3_font_size": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "title_3_font_weight": {
+      "type": "enumeration",
+      "required": true,
+      "default": "normal",
+      "enum": [
+        "normal",
+        "bold",
+        "bolder",
+        "lighter"
+      ]
+    },
+    "title_3_font_spacing": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "title_3_text_transform": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "title_3_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_3_hover_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_3_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_3_padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": true
+    }
+  },
+  "config": {}
+}

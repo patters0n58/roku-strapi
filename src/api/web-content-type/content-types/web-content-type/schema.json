@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_content_types",
+  "info": {
+    "singularName": "web-content-type",
+    "pluralName": "web-content-types",
+    "displayName": "Web Content Type Router"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "pageType": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-page.web-page"
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-layout.web-layout"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    }
+  }
+}

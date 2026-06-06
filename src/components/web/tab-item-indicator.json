@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_web_tab_item_indicators",
+  "info": {
+    "displayName": "Tab Item Indicator"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false,
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "config": {}
+}

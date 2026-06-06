@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_web_images",
+  "info": {
+    "displayName": "Image"
+  },
+  "options": {},
+  "attributes": {
+    "sourceKey": {
+      "type": "string",
+      "required": true
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "required": true,
+      "default": "aspectRatio_16:9",
+      "enum": [
+        "aspectRatio_16:9",
+        "aspectRatio_16:6",
+        "aspectRatio_16:2",
+        "aspectRatio_1:1",
+        "aspectRatio_2:3"
+      ]
+    },
+    "objectFit": {
+      "type": "enumeration",
+      "required": true,
+      "default": "cover",
+      "enum": [
+        "contain",
+        "cover",
+        "fill",
+        "none",
+        "scaleDown"
+      ]
+    },
+    "placeholderColor": {
+      "type": "component",
+      "component": "web.color",
+      "repeatable": false
+    },
+    "border": {
+      "type": "component",
+      "component": "web.border",
+      "repeatable": false
+    },
+    "hoverBorder": {
+      "type": "component",
+      "component": "web.border",
+      "repeatable": false
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "padding": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

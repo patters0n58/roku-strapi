@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_card_styles",
+  "info": {
+    "singularName": "mobile-card-style",
+    "pluralName": "mobile-card-styles",
+    "displayName": "Mobile Card Style"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+   "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-layout.mobile-layout"
+    },
+    "card_type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "card_type_1",
+      "enum": [
+        "card_type_1",
+        "card_type_2"
+      ]
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "card_type_1": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "card_type"
+            },
+            "card_type_1"
+          ]
+        }
+      },
+      "component": "mobile.card-type-1",
+      "repeatable": false
+    },
+    "card_type_2": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "card_type"
+            },
+            "card_type_2"
+          ]
+        }
+      },
+      "component": "mobile.card-type-2",
+      "repeatable": false
+    }
+  }
+}

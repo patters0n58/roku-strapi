@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_web_preview_playbacks",
+  "info": {
+    "displayName": "Preview Playback"
+  },
+  "options": {},
+  "attributes": {
+    "sourceKey": {
+      "type": "string",
+      "required": true
+    },
+    "startTimeSourceKey": {
+      "type": "string",
+      "required": true
+    },
+    "endTimeSourceKey": {
+      "type": "string"
+    },
+    "delay": {
+      "type": "biginteger",
+      "required": true,
+      "default": "5000"
+    },
+    "loopCount": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 1
+    },
+    "defaultAudioMode": {
+      "type": "enumeration",
+      "required": true,
+      "default": "mute",
+      "enum": [
+        "mute",
+        "unMute"
+      ]
+    }
+  },
+  "config": {}
+}

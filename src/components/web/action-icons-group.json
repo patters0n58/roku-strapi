@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_web_action_icons_groups",
+  "info": {
+    "displayName": "Action Icons Group"
+  },
+  "options": {},
+  "attributes": {
+    "align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "gap": {
+      "type": "integer",
+      "required": true,
+      "default": 10,
+      "min": 0
+    },
+    "margin": {
+      "type": "component",
+      "component": "web.spacing",
+      "repeatable": false
+    },
+    "actionIcons": {
+      "type": "component",
+      "component": "web.action-icon",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    }
+  },
+  "config": {}
+}

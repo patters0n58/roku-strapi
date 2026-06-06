@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_web_feeds",
+  "info": {
+    "displayName": "Feed"
+  },
+  "options": {},
+  "attributes": {
+    "feed_url": {
+      "type": "string",
+      "required": true
+    },
+    "enable_url_mapping": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "url_mapping": {
+      "type": "json",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enableUrlMapping"
+            },
+            true
+          ]
+        }
+      }
+    }
+  },
+  "config": {}
+}

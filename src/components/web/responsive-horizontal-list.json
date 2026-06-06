@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_web_responsive_horizontal_lists",
+  "info": {
+    "displayName": "Responsive Horizontal List"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "mobile": {
+      "type": "component",
+      "component": "web.horizontal-list",
+      "repeatable": false
+    },
+    "tablet": {
+      "type": "component",
+      "component": "web.horizontal-list",
+      "repeatable": false
+    },
+    "desktop": {
+      "type": "component",
+      "component": "web.horizontal-list",
+      "repeatable": false
+    },
+    "large_desktop": {
+      "type": "component",
+      "component": "web.horizontal-list",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

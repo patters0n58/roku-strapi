@@ -1,0 +1,120 @@
+{
+  "collectionName": "components_web_responsive_filters_tabs",
+  "info": {
+    "displayName": "Responsive Filters Tabs"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "button_label_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "button_label_enable_custom_label"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "button_label_enable_custom_label": {
+      "type": "boolean",
+      "default": false
+    },
+    "button_label_custom_label": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "button_label_enable_custom_label"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "button_label_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "button_label_hover_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "button_label_selected_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "button_label_font_family": {
+      "type": "enumeration",
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "button_label_text_transform": {
+      "type": "enumeration",
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "button_label_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "button_label_hover_text_decoration": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "mobile": {
+      "type": "component",
+      "component": "web.dynamic-filter-list",
+      "repeatable": false
+    },
+    "tablet": {
+      "type": "component",
+      "component": "web.dynamic-filter-list",
+      "repeatable": false
+    },
+    "desktop": {
+      "type": "component",
+      "component": "web.dynamic-filter-list",
+      "repeatable": false
+    },
+    "large_desktop": {
+      "type": "component",
+      "component": "web.dynamic-filter-list",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

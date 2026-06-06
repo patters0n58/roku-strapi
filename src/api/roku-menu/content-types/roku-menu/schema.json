@@ -1,0 +1,161 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roku_menus",
+  "info": {
+    "singularName": "roku-menu",
+    "pluralName": "roku-menus",
+    "displayName": "Roku menu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "feed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feed.feed"
+    },
+    "menu_translation_left": {
+      "type": "integer",
+      "required": true
+    },
+    "menu_translation_top": {
+      "type": "integer",
+      "required": true
+    },
+    "show_gradient": {
+      "type": "boolean",
+      "required": true
+    },
+    "menu_gradient_image_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_gradient"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "menu_gradient_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_gradient"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "menu_gradient_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_gradient"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "enable_option_button": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "show_logo": {
+      "type": "boolean",
+      "default": true
+    },
+    "logo_image_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_logo"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "logo_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "logo_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "logo_translation_top": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "logo_translation_left": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "show_logo"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    }
+  }
+}

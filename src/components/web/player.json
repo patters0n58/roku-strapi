@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_web_players",
+  "info": {
+    "displayName": "Player"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "source_key": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

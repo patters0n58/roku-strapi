@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_roku_action_icons",
+  "info": {
+    "displayName": "Action Icon"
+  },
+  "options": {},
+  "attributes": {
+    "action": {
+      "type": "enumeration",
+      "required": true,
+      "default": "play",
+      "enum": [
+        "play",
+        "myList",
+        "share"
+      ]
+    },
+    "icon_url": {
+      "type": "string",
+      "required": true
+    },
+    "hover_icon_url": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 40
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 40
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

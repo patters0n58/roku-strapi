@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_roku_lock_badges",
+  "info": {
+    "displayName": "Lock Badge"
+  },
+  "options": {},
+  "attributes": {
+    "lock_icon_url": {
+      "type": "string",
+      "required": true,
+      "regex": "\\bhttps?:\\/\\/[^\\s/$.?#].[^\\s]*\\b"
+    },
+    "unlock_icon_url": {
+      "type": "string"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomRight",
+        "bottomCenter",
+        "bottomLeft"
+      ]
+    },
+    "source_key": {
+      "type": "string",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 30
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 30
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

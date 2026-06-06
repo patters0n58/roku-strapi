@@ -1,0 +1,105 @@
+{
+  "collectionName": "components_roku_texts",
+  "info": {
+    "displayName": "Text"
+  },
+  "options": {},
+  "attributes": {
+    "source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "use_custom_text"
+            },
+            false
+          ]
+        }
+      },
+      "required": true
+    },
+    "use_custom_text": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "use_custom_text"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "focus_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "height": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    },
+    "lines": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "align": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": ["left", "right", "center"]
+    },
+    "font_family": {
+      "type": "enumeration",
+      "required": true,
+      "default": "MediumSystemFont",
+      "enum": [
+        "TinySystemFont",
+        "TinyBoldSystemFont",
+        "SmallerSystemFont",
+        "SmallerBoldSystemFont",
+        "SmallestSystemFont",
+        "SmallestBoldSystemFont",
+        "SmallSystemFont",
+        "SmallBoldSystemFont",
+        "MediumSystemFont",
+        "MediumBoldSystemFont",
+        "LargeSystemFont",
+        "LargeBoldSystemFont",
+        "LargestSystemFont",
+        "ExtraLargeSystemFont",
+        "ExtraLargeBoldSystemFont",
+        "BadgeSystemFont"
+      ]
+    },
+    "translation_top": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "translation_left": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  },
+  "config": {}
+}

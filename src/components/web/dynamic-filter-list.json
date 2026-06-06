@@ -1,0 +1,281 @@
+{
+  "collectionName": "components_web_dynamic_filter_lists_flat",
+  "info": {
+    "displayName": "Filter Tabs"
+  },
+  "options": {},
+  "attributes": {
+    "gap": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "button_height": {
+      "type": "integer",
+      "required": true
+    },
+    "button_display_mode": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Dynamic",
+      "enum": ["Fix", "Dynamic"]
+    },
+    "button_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "button_display_mode"
+            },
+            "Fix"
+          ]
+        }
+      }
+    },
+    "button_content_alignment": {
+      "type": "enumeration",
+      "required": true,
+      "default": "left",
+      "enum": ["left", "center", "right"]
+    },
+    "button_background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field",
+      "required": true
+    },
+    "button_hover_background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+    "button_selected_background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field"
+    },
+
+    "button_label_font_size": {
+      "type": "integer"
+    },
+    "button_label_font_height": {
+      "type": "integer"
+    },
+    "button_label_font_spacing": {
+      "type": "integer",
+      "default": 0
+    },
+
+    "button_label_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "button_label_font_weight": {
+      "type": "enumeration",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "button_label_padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "button_border_style": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "button_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field"
+    },
+    "button_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "default": 0
+    },
+    "button_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field"
+    },
+    "button_hover_border_style": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "button_hover_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_hover_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field"
+    },
+    "button_hover_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_hover_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "default": 0
+    },
+    "button_hover_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_hover_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field"
+    },
+    "button_selected_border_style": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "button_selected_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_selected_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field"
+    },
+    "button_selected_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_selected_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "default": 0
+    },
+    "button_selected_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "button_selected_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field"
+    },
+    "button_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    },
+    "button_padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field"
+    }
+  },
+  "config": {}
+}

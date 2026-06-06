@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roku_card_styles",
+  "info": {
+    "singularName": "roku-card-style",
+    "pluralName": "roku-card-styles",
+    "displayName": "Roku Card Style"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roku-layout.roku-layout"
+    },
+    "card_type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "card_type_1",
+      "enum": [
+        "card_type_1",
+        "card_type_2",
+        "button_type_1"
+      ]
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "card_type_1": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "card_type"
+            },
+            "card_type_1"
+          ]
+        }
+      },
+      "component": "roku.card-type1",
+      "repeatable": false
+    },
+    "card_type_2": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "card_type"
+            },
+            "card_type_2"
+          ]
+        }
+      },
+      "component": "roku.card-type2",
+      "repeatable": false
+    },
+    "button_type_1": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "card_type"
+            },
+            "button_type_1"
+          ]
+        }
+      },
+      "component": "roku.button-type-1",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_apps",
+  "info": {
+    "singularName": "mobile-app",
+    "pluralName": "mobile-apps",
+    "displayName": "Mobile App"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+   "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "log_level": {
+      "type": "enumeration",
+      "default": "info",
+      "enum": [
+        "debug",
+        "info",
+        "warn",
+        "error"
+      ]
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    },
+    "layout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mobile-layout.mobile-layout"
+    },
+    "platform": {
+      "type": "enumeration",
+      "required": true,
+      "default": "ios",
+      "enum": [
+        "android",
+        "ios"
+      ]
+    }
+  }
+}

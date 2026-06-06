@@ -1,0 +1,2717 @@
+{
+  "collectionName": "components_web_card_type1s",
+  "info": {
+    "displayName": "Card Type 1",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "border_style": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "hover_border_style": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "hover_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "hover_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "hover_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "hover_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "hover_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "hover_border_style"
+            },
+            "none "
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "image_source_key": {
+      "type": "string",
+      "required": true
+    },
+    "image_aspect_ratio": {
+      "type": "enumeration",
+      "required": true,
+      "default": "aspectRatio_16:9",
+      "enum": [
+        "aspectRatio_1:1",
+        "aspectRatio_2:1",
+        "aspectRatio_2:3",
+        "aspectRatio_3:4",
+        "aspectRatio_4:3",
+        "aspectRatio_5:3",
+        "aspectRatio_5:6",
+        "aspectRatio_9:13",
+        "aspectRatio_9:16",
+        "aspectRatio_12:4",
+        "aspectRatio_16:1",
+        "aspectRatio_16:2",
+        "aspectRatio_16:4",
+        "aspectRatio_16:5",
+        "aspectRatio_16:6",
+        "aspectRatio_16:7",
+        "aspectRatio_16:9",
+        "aspectRatio_19:5"
+      ]
+    },
+    "image_object_fit": {
+      "type": "enumeration",
+      "required": true,
+      "default": "cover",
+      "enum": [
+        "contain",
+        "cover",
+        "fill",
+        "none",
+        "scaleDown"
+      ]
+    },
+    "image_placeholder_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "image_margin": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "image_padding": {
+      "type": "customField",
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "enable_lock_badge": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "lock_badge_lock_icon_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "regex": "\\bhttps?:\\/\\/[^\\s/$.?#].[^\\s]*\\b"
+    },
+    "lock_badge_unlock_icon_url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "lock_badge_position": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomRight",
+        "bottomCenter",
+        "bottomLeft"
+      ]
+    },
+    "lock_badge_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "lock_badge_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 30
+    },
+    "lock_badge_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 30
+    },
+    "lock_badge_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_lock_badge"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "enable_badge_1": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "badge_1_entity_type": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_1_icon": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_1_hover_icon": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_1_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_1_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_1_position": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "bottomRight",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ]
+    },
+    "badge_1_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "enable_badge_2": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "badge_2_entity_type": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_2_icon": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_2_hover_icon": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_2_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_2_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "badge_2_position": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "bottomRight",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ]
+    },
+    "badge_2_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_badge_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "enable_progress_bar": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "progress_bar_total_bar_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "progress_bar_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "progress_bar_total_bar_corner_radius": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 4
+    },
+    "progress_bar_corner_radius": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 4
+    },
+    "progress_bar_position": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "bottom",
+      "enum": [
+        "top",
+        "bottom"
+      ]
+    },
+    "progress_bar_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "progress_bar_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 4
+    },
+    "progress_bar_hide_unwatched": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_progress_bar"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": true
+    },
+    "enable_tag": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "tag_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "tag_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "tag_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "tag_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "tag_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 10
+    },
+    "tag_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "regular",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "tag_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1
+    },
+    "tag_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "tag_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "tag_text_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field"
+    },
+    "tag_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "tag_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "tag_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "tag_position": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "bottomRight",
+      "enum": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ]
+    },
+    "tag_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "tag_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "tag_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "tag_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "tag_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "tag_hover_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "tag_hover_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "tag_hover_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "tag_hover_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "tag_hover_text_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field"
+    },
+    "tag_hover_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_tag"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field"
+    },
+    "enable_title_1": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_1_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_1_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": false
+    },
+    "title_1_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_1_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_hover_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_1_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1,
+      "min": 1
+    },
+    "title_1_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_1_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_1_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 10
+    },
+    "title_1_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "regular",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "title_1_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1
+    },
+    "title_1_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "title_1_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_1_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_1_hover_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_hover_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_hover_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "title_1_hover_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "title_1_hover_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "title_1_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_1_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_1_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_1_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "title_1_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "title_1_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_1"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "enable_title_2": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_2_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_2_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": false
+    },
+    "title_2_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_2_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_hover_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_2_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1,
+      "min": 1
+    },
+    "title_2_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_2_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_2_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 10
+    },
+    "title_2_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "regular",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "title_2_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1
+    },
+    "title_2_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "title_2_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_2_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_2_hover_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_hover_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_hover_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "title_2_hover_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "title_2_hover_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "title_2_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_2_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_2_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_2_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "title_2_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "title_2_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_2"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "enable_title_3": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "title_3_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_3_use_custom_text": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": false
+    },
+    "title_3_custom_text": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_3_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_hover_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_height": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "title_3_lines": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1,
+      "min": 1
+    },
+    "title_3_align": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "left",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "title_3_font_family": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "serif",
+      "enum": [
+        "serif",
+        "sansSerif",
+        "monospace",
+        "cursive",
+        "fantasy",
+        "inter",
+        "montserrat"
+      ]
+    },
+    "title_3_font_size": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 10
+    },
+    "title_3_font_weight": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "regular",
+      "enum": [
+        "thin",
+        "extra-light",
+        "light",
+        "regular",
+        "medium",
+        "semi-bold",
+        "bold",
+        "extra-bold",
+        "black"
+      ]
+    },
+    "title_3_font_spacing": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 1
+    },
+    "title_3_text_transform": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none",
+      "enum": [
+        "none",
+        "capitalize",
+        "uppercase",
+        "lowercase"
+      ]
+    },
+    "title_3_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_3_hover_text_decoration": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "none",
+        "underline",
+        "strikethrough"
+      ]
+    },
+    "title_3_hover_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_hover_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_hover_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "title_3_hover_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "title_3_hover_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "title_3_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_3_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "title_3_background_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "title_3_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "title_3_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "title_3_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_title_3"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "enable_secondary_image": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "secondary_image_source_key": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "required": false
+    },
+    "secondary_image_object_fit": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "cover",
+      "enum": [
+        "contain",
+        "cover",
+        "fill",
+        "none",
+        "scale-down"
+      ]
+    },
+    "secondary_image_margin": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "secondary_image_padding": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.spacing_field",
+      "required": false
+    },
+    "secondary_image_position": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    },
+    "secondary_image_aspect_ratio": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "enum": [
+        "aspectRatio_1:1",
+        "aspectRatio_2:1",
+        "aspectRatio_2:3",
+        "aspectRatio_3:4",
+        "aspectRatio_4:3",
+        "aspectRatio_5:3",
+        "aspectRatio_9:13",
+        "aspectRatio_9:16",
+        "aspectRatio_12:4",
+        "aspectRatio_16:1",
+        "aspectRatio_16:2",
+        "aspectRatio_16:4",
+        "aspectRatio_16:6",
+        "aspectRatio_16:7",
+        "aspectRatio_16:9"
+      ]
+    },
+    "secondary_image_border_style": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": "none ",
+      "enum": [
+        "none ",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset"
+      ]
+    },
+    "secondary_image_border_color": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.color_field",
+      "required": false
+    },
+    "secondary_image_border_width": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "secondary_image_border_corner_radius": {
+      "type": "customField",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enable_secondary_image"
+            },
+            true
+          ]
+        }
+      },
+      "customField": "plugin::ui.corner_field",
+      "required": false
+    },
+    "background_color": {
+      "type": "customField",
+      "customField": "plugin::ui.color_field",
+      "required": true
+    }
+  },
+  "config": {}
+}

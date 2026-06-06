@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_web_auto_slides",
+  "info": {
+    "displayName": "Auto Slide"
+  },
+  "options": {},
+  "attributes": {
+    "seconds": {
+      "type": "integer",
+      "required": true,
+      "default": 5,
+      "min": 0
+    },
+    "numberOfTiles": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    }
+  },
+  "config": {}
+}

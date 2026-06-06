@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_layouts",
+  "info": {
+    "singularName": "web-layout",
+    "pluralName": "web-layouts",
+    "displayName": "Web Layout"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant"
+    }
+  }
+}
