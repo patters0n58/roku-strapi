@@ -29,7 +29,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "strapi-plugin-populate-all": "^1.4.0",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.0.0",
+    "zod": "^4.4.3"
   },
   "overrides": {
     "@strapi/admin": "5.31.2",
