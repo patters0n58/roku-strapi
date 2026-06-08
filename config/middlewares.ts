@@ -1,31 +1,7 @@
 export default ({ env }) => [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-  {
-    name: 'strapi::body',
-    config: {
-      formLimit: '60mb', // ⛔ blocks form submissions >60MB
-      jsonLimit: '10mb', // ⛔ blocks JSON payloads >10MB
-      textLimit: '10mb', // ⛔ blocks raw text >10MB
-      multipart: true,
-      formidable: {
-        maxFileSize: 30 * 1024 * 1024, // ✅ 60 MB multipart limit
-      },
-    },
-  },
-  {
-  name: 'strapi::cors',
-  config: {
-    origin: ['https://patters0n58-roku-admin-973ktk8ew-nagalakshmi-s-projects.vercel.app/'],
-  },
-},
+
   {
     name: 'strapi::security',
     config: {
@@ -51,6 +27,34 @@ export default ({ env }) => [
           ],
           upgradeInsecureRequests: null,
         },
+      },
+    },
+  },
+
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ["http://localhost:3000"], 
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+      headers: ["Content-Type", "Authorization"],
+    },
+  },
+
+  'strapi::poweredBy',
+  'strapi::query',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+
+  {
+    name: 'strapi::body',
+    config: {
+      formLimit: '60mb',
+      jsonLimit: '10mb',
+      textLimit: '10mb',
+      multipart: true,
+      formidable: {
+        maxFileSize: 30 * 1024 * 1024,
       },
     },
   },
