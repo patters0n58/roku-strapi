@@ -21,6 +21,7 @@
     "@strapi/plugin-users-permissions": "5.31.2",
     "@strapi/provider-upload-aws-s3": "^5.31.2",
     "@strapi/strapi": "5.31.2",
+    "axios": "^1.17.0",
     "esbuild": "^0.28.0",
     "pg": "^8.21.0",
     "pg-connection-string": "^2.13.0",
