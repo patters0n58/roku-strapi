@@ -132,3 +132,6 @@ build
 
 .env
 .env.*
+
+*.tar.gz
+*.tar.gz.enc
