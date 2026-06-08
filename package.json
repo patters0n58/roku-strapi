@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fresh.codes/strapi-plugin-export-csv": "^1.0.2",
+    "@strapi/data-transfer": "^5.47.1",
     "@strapi/plugin-color-picker": "^5.31.2",
     "@strapi/plugin-documentation": "^5.31.2",
     "@strapi/plugin-users-permissions": "5.31.2",
