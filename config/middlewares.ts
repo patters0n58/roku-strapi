@@ -34,10 +34,7 @@ export default ({ env }) => [
   {
     name: 'strapi::cors',
     config: {
-      origin: ["http://localhost:3000",
-  "https://patters0n58-roku-admin-gyc0ixai4-nagalakshmi-s-projects.vercel.app",
-  "https://roku-strapi.onrender.com"
-],
+      origin: '*',
       headers: '*',
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       credentials: true,
